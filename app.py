@@ -49,15 +49,12 @@ selected_music = st.selectbox(
     music_name
 )
 
-if st.button("Recommendation for you!"):
+if st.button("Recommendation for you"):
     recommendation_composer = recommend_composer(selected_music)
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.text(recommendation_composer[1])
+    recommended_names = recommendation_composer[0]  # list of names
 
-    with col2:
-        st.text(recommendation_composer[2])
-
-    # with col3:
-    #     st.text(recommendation_composer[3])
+    cols = st.columns(3)
+    for i in range(min(len(recommended_names), 3)):
+        with cols[i]:
+            st.text(recommended_names[i])

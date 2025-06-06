@@ -1,0 +1,17 @@
+# Ignore virtual environments
+env/
+myenv/
+
+# Ignore Python cache files
+*.pyc
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+
+# Ignore artifacts and egg-info
+artifacts/
+src.egg-info/
